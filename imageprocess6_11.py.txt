@@ -1,0 +1,17 @@
+import cv2 
+img3 = cv2.imread('original/Computer-Vision-with-Python/DATA/00-puppy.jpg')
+cv2.imshow('puppy',img3)     #this is instead of matplotlib ->  plt.imshow(img3)
+
+while True:
+     cv2.waitKey()   #  this waits for the key input/exit button
+     
+     # the logic below says:  if we waited 1m second and pressed the escape key...
+     if cv2.waitKey(1)&0xFF == 27:   ## 0xFF  is a hexidecimal constant and 27 is esc
+     	break
+
+cv2.destroyAllWindows()
+
+     
+
+#when you hit exit, the cv2.waitKey() is executed and jupyter notebook will show return value of '-1'
+# if there is an error, you have to shut it down and 'restart the kernel on the jupyter notebook'
